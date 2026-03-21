@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Abdulrahman Hasan",
+    "url": "https://aboudhasan.tech",
+    "graduationYear": 2027,
+    "tags": ["TypeScript", "JavaScript", "Node.js", "React", "Vue"],
+    "jobStatus": "Employed"
+  },
+  {
+    "name": "John Doe",
+    "url": "https://google.com",
+    "graduationYear": 2027,
+    "tags": [
+      "C++",
+      "Python",
+      "C",
+      "Embedded Systems",
+      "Quantitative Development"
+    ],
+    "jobStatus": "Employed"
+  }
+]
