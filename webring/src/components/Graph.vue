@@ -9,7 +9,7 @@ import {
 import "v-network-graph/lib/style.css";
 import membersArray from "../../../members.json";
 import type { Member } from "../types";
-import type { Layouts } from "v-network-graph";
+import type { EventHandlers, Layouts } from "v-network-graph";
 
 const members: Member[] = membersArray as Member[];
 const nodes = reactive({});
@@ -86,13 +86,11 @@ function buildNetwork(nodes: vNG.Nodes, edges: vNG.Edges) {
   Object.assign(edges, newEdges);
 }
 
-const eventHandlers: EventHandlers = {
-  "node:click": ({ node, event }) => {
-    if (event.ctrlKey) {
-      // ...
-    }
-  },
-};
+// const eventHandlers: EventHandlers = {
+//   "node:click": ({ node, event }) => {
+
+//   },
+// };
 </script>
 
 <template>
