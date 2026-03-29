@@ -1,31 +1,37 @@
+export const jobFiltersArray = [
+  "Seeking co-op",
+  "Employed",
+  "Not looking for work",
+  "Seeking full-time",
+] as const;
+
+export const yearFiltersArray = [2023, 2024, 2025, 2026, 2027, 2028] as const;
+
+export const techFiltersArray = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Vue",
+  "Angular",
+  "Node.js",
+  "ASP.NET",
+  "C",
+  "C++",
+  "C#",
+  "Linux",
+  "System Administration",
+  "Machine Learning",
+  "Data Science",
+] as const;
+
 export interface Member {
   name: string;
   url: string;
-  tags: string[];
-  jobStatus:
-    | "Seeking co-op"
-    | "Employed"
-    | "Not looking for work"
-    | "Seeking full-time";
-  graduationYear: number;
+  tags: TechFilters[];
+  jobStatus: JobFilters;
+  graduationYear: YearFilters;
 }
 
-export type JobFilters =
-  | "Seeking co-op"
-  | "Employed"
-  | "Not looking for work"
-  | "Seeking full-time";
-export type YearFilters = 2024 | 2025 | 2026 | 2027 | 2028;
-export type TechFilters =
-  | "React"
-  | "TypeScript"
-  | "JavaScript"
-  | "Vue"
-  | "Angular"
-  | "Node.js"
-  | "ASP.NET"
-  | "C"
-  | "C++"
-  | "C#"
-  | "Linux"
-  | "System Administration";
+export type JobFilters = (typeof jobFiltersArray)[number];
+export type YearFilters = (typeof yearFiltersArray)[number];
+export type TechFilters = (typeof techFiltersArray)[number];

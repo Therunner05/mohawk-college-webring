@@ -3,7 +3,7 @@
     "name": "Abdulrahman Hasan",
     "url": "https://aboudhasan.tech",
     "graduationYear": 2027,
-    "tags": ["TypeScript", "JavaScript", "Node.js", "React", "Vue"],
+    "tags": ["TypeScript", "JavaScript", "Node.js", "React", "Vue", "Linux"],
     "jobStatus": "Employed"
   },
   {
@@ -18,5 +18,12 @@
       "Quantitative Development"
     ],
     "jobStatus": "Employed"
+  },
+  {
+    "name": "Al Korithem",
+    "url": "https://example.com",
+    "graduationYear": 2028,
+    "tags": ["Python", "C++", "Machine Learning", "Data Science", "ASP.NET"],
+    "jobStatus": "Seeking co-op"
   }
 ]

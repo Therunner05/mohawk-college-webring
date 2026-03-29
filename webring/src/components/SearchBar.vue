@@ -3,30 +3,50 @@ import { ref } from "vue";
 
 const searchInput = ref<string>("");
 const emits = defineEmits<{ setSearchInput: [input: string] }>();
+
+const handleInput = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emits("setSearchInput", target.value);
+};
 </script>
 
 <template>
-  <div>
+  <div class="search-wrapper">
     <input
+      type="search"
       v-model="searchInput"
-      @input="emits('setSearchInput', searchInput)"
+      @input="handleInput"
       placeholder="Search members by name..."
+      class="search-input"
     />
   </div>
 </template>
 
 <style scoped>
-input {
-  margin: auto;
-  width: 97rem;
-  border-radius: 8px;
-  background-color: #2e2e2e;
-  padding: 1rem;
-  border: 1px solid #2e2e2e;
-  color: #e8e8e8;
+.search-wrapper {
+  width: 100%;
 }
 
-input:focus {
+.search-input {
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #cccccc;
+  border: 1px solid #333333;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 4px;
+  appearance: none;
+  transition:
+    border-color 0.2s ease,
+    outline 0.2s ease;
+}
+
+.search-input::placeholder {
+  color: #888888;
+}
+
+.search-input:focus {
   outline: none;
 }
 </style>

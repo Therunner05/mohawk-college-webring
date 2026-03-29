@@ -1,29 +1,12 @@
 <script setup lang="ts">
-import { type JobFilters, type TechFilters, type YearFilters } from "../types";
-
-const JOBFILTERS: JobFilters[] = [
-  "Seeking co-op",
-  "Employed",
-  "Not looking for work",
-  "Seeking full-time",
-];
-
-const TECHFILTERS: TechFilters[] = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "Vue",
-  "Angular",
-  "Node.js",
-  "ASP.NET",
-  "C",
-  "C++",
-  "C#",
-  "Linux",
-  "System Administration",
-];
-
-const YEARFILTERS: YearFilters[] = [2024, 2025, 2026, 2027, 2028];
+import {
+  type JobFilters,
+  type TechFilters,
+  type YearFilters,
+  jobFiltersArray,
+  yearFiltersArray,
+  techFiltersArray,
+} from "../types";
 
 const props = defineProps<{
   currentJobFilters: JobFilters[];
@@ -39,76 +22,84 @@ const emits = defineEmits<{
 </script>
 
 <template>
-  <div class="container">
-    <button
-      @click="emits('setJobFilter', filter)"
-      v-for="filter in JOBFILTERS"
-      v-bind:class="{
-        'active-button': props.currentJobFilters.includes(filter),
-        button: !props.currentJobFilters.includes(filter),
-      }"
-    >
-      {{ filter }}
-    </button>
-  </div>
-  <div class="container">
-    <button
-      @click="emits('setTechFilter', filter)"
-      v-for="filter in TECHFILTERS"
-      :key="filter"
-      v-bind:class="{
-        'active-button': props.currentTechFilters.includes(filter),
-        button: !props.currentTechFilters.includes(filter),
-      }"
-    >
-      {{ filter }}
-    </button>
-  </div>
-  <div class="container">
-    <button
-      @click="emits('setYearFilter', filter)"
-      v-for="filter in YEARFILTERS"
-      :key="filter"
-      v-bind:class="{
-        'active-button': props.currentYearFilters.includes(filter),
-        button: !props.currentYearFilters.includes(filter),
-      }"
-    >
-      {{ filter }}
-    </button>
+  <div class="filters-wrapper">
+    <div class="filter-group">
+      <button
+        v-for="filter in jobFiltersArray"
+        :key="filter"
+        @click="emits('setJobFilter', filter)"
+        class="filter-btn"
+        :class="{ 'is-active': props.currentJobFilters.includes(filter) }"
+      >
+        {{ filter }}
+      </button>
+    </div>
+
+    <div class="filter-group">
+      <button
+        v-for="filter in techFiltersArray"
+        :key="filter"
+        @click="emits('setTechFilter', filter)"
+        class="filter-btn"
+        :class="{ 'is-active': props.currentTechFilters.includes(filter) }"
+      >
+        {{ filter }}
+      </button>
+    </div>
+
+    <div class="filter-group">
+      <button
+        v-for="filter in yearFiltersArray"
+        :key="filter"
+        @click="emits('setYearFilter', filter)"
+        class="filter-btn"
+        :class="{ 'is-active': props.currentYearFilters.includes(filter) }"
+      >
+        {{ filter }}
+      </button>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.container {
+.filters-wrapper {
   display: flex;
-  padding: 0.8rem;
-  border-radius: 8px;
-  background-color: #1a1a1a;
-  border: 1px solid #2e2e2e;
-  gap: 0.6rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
   flex-wrap: wrap;
+  padding: 0.6rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  gap: 0.5rem;
 }
 
-.button {
-  border: 1px solid #ff9933;
-  border-radius: 8px;
-  background-color: #2e2e2e;
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid #333333;
+  color: #cccccc;
+  font-size: 0.85rem;
+  font-family: inherit;
+  padding: 0.4rem 0.85rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  border-color: #ff9933;
   color: #e8e8e8;
-  font-size: 1.2rem;
-  padding: 0.8rem 1.3rem;
-  transition: background-color 0.25s ease;
+  outline: none;
 }
 
-.active-button {
-  border: 1px solid #000000;
-  border-radius: 8px;
+.filter-btn.is-active {
   background-color: #ff9933;
-  color: #1a1a1a;
-  font-size: 1.2rem;
-  padding: 0.8rem 1.3rem;
-  transition: background-color 0.25s ease;
+  border-color: #ff9933;
+  color: #111111;
 }
 </style>
