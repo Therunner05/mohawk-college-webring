@@ -4,6 +4,7 @@ import FilterButtons from "./components/FilterButtons.vue";
 import { ref, toRaw } from "vue";
 import DirectoryView from "./components/DirectoryView.vue";
 import SearchBar from "./components/SearchBar.vue";
+import Graph from "./components/Graph.vue";
 
 const activeJobFilters = ref<JobFilters[]>([]);
 const activeTechFilters = ref<TechFilters[]>([]);
@@ -47,6 +48,8 @@ function setYearFilters(value: YearFilters) {
       <h1><span>Mohawk College</span> Webring</h1>
       <p class="header-sub">A directory of student portfolio sites</p>
     </header>
+
+    <Graph></Graph>
 
     <section class="controls-container">
       <SearchBar @set-search-input="activeSearchFilter = $event"></SearchBar>
