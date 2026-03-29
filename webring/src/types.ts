@@ -22,6 +22,18 @@ export const techFiltersArray = [
   "System Administration",
   "Machine Learning",
   "Data Science",
+  "Go",
+  "Rust",
+  "Ruby",
+  "PHP",
+  "Kotlin",
+  "Angular",
+  "Svelte",
+  "Django",
+  "FastAPI",
+  "Spring Boot",
+  "Java",
+  "Laravel",
 ] as const;
 
 export interface Member {

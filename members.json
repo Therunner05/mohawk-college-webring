@@ -25,5 +25,38 @@
     "graduationYear": 2028,
     "tags": ["Python", "C++", "Machine Learning", "Data Science", "ASP.NET"],
     "jobStatus": "Seeking co-op"
+  },
+  {
+    "name": "Jack Ovalchrates",
+    "url": "https://wikipedia.org",
+    "graduationYear": 2024,
+    "tags": [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Vue",
+      "Angular",
+      "Node.js",
+      "ASP.NET",
+      "C",
+      "C++",
+      "C#",
+      "Linux",
+      "System Administration",
+      "Machine Learning",
+      "Data Science",
+      "Go",
+      "Rust",
+      "Ruby",
+      "PHP",
+      "Kotlin",
+      "Svelte",
+      "Django",
+      "FastAPI",
+      "Spring Boot",
+      "Java",
+      "Laravel"
+    ],
+    "jobStatus": "Seeking full-time"
   }
 ]

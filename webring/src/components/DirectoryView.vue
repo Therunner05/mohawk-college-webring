@@ -124,6 +124,27 @@ const filteredMembers = computed(() => {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.75rem;
+  overflow-y: auto;
+  align-content: flex-start;
+  min-height: 0;
+  padding-right: 0.25rem;
+}
+
+.tags-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tags-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tags-container::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 4px;
+}
+
+.tags-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
 }
 
 .tag {
