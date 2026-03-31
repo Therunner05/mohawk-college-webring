@@ -1,0 +1,27 @@
+name: validate PR on open
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+jobs:
+  validate-submission:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: validation script
+        run: npx tsx scripts/validate.ts

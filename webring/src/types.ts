@@ -27,7 +27,6 @@ export const techFiltersArray = [
   "Ruby",
   "PHP",
   "Kotlin",
-  "Angular",
   "Svelte",
   "Django",
   "FastAPI",
