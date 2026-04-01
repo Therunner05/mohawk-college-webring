@@ -30,7 +30,7 @@ jobs:
         if: steps.array-check.outputs.should_run_script == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: install nodemailer
         if: steps.array-check.outputs.should_run_script == 'true'
@@ -40,5 +40,5 @@ jobs:
         if: steps.array-check.outputs.should_run_script == 'true'
         run: node scripts/send-emails.js
         env:
-          FIRST_SECRET_ENV_VAR: ${{ secrets.EMAIL}}
-          SECOND_SECRET_ENV_VAR: ${{ secrets.APP_PASSWORD }}
+          EMAIL: ${{ secrets.EMAIL}}
+          PASSWORd: ${{ secrets.APP_PASSWORD }}
