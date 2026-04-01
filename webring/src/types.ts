@@ -33,6 +33,8 @@ export const techFiltersArray = [
   "Spring Boot",
   "Java",
   "Laravel",
+  "Bash",
+  "Python"
 ] as const;
 
 export interface Member {
