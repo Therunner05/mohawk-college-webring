@@ -56,7 +56,9 @@
       "FastAPI",
       "Spring Boot",
       "Java",
-      "Laravel"
+      "Laravel",
+      "Python",
+      "Bash"
     ],
     "jobStatus": "Seeking full-time"
   },
@@ -66,5 +68,12 @@
     "jobStatus": "Not looking for work",
     "graduationYear": 2023,
     "tags": ["C"]
+  },
+  {
+    "name": "Mister Robot",
+    "url": "https://gcc.gnu.org/",
+    "jobStatus": "Not looking for work",
+    "graduationYear": 2023,
+    "tags": ["Linux", "Python", "Bash"]
   }
 ]
