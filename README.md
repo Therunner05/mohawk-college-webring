@@ -1,6 +1,6 @@
 ## What is a Webring?
 
-A webring is a collection of websites linked together in a circular structure. By joining this webring, you integrate portfolio into a continuous loop with fellow Mohawk College peers. This allows users to organically discover and filter student portfolio sites, fostering a stronger developer community.
+A webring is a collection of websites linked together in a circular structure. By joining this webring, you integrate your site into a continuous loop with fellow Mohawk College peers. This allows users to organically discover and filter student portfolio sites, fostering a stronger developer community.
 
 ## How to Join
 
