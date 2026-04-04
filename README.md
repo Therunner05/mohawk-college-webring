@@ -69,4 +69,6 @@ Here is an example of what your HTML `href` tags should look like (make sure to 
 </a>
 ```
 
-**Future Plans for the Widget:** Currently, the widget relies on simple text labels like 'Next', 'Previous', and 'Mohawk Webring'. In the future, we hope to have an official webring logo for the main link and have SVG arrows for the navigation links. This will allow you to embed a much more visually appealing widget on your portfolio.
+**Future Plans:** 
+- Currently, the widget relies on simple text labels like 'Next', 'Previous', and 'Mohawk Webring'. In the future, we hope to have an official webring logo for the main link and have SVG arrows for the navigation links. This will allow you to embed a much more visually appealing widget on your portfolio.
+- We'd also like to have a prettier domain than what we currently have.
