@@ -49,13 +49,19 @@ Here is an example of what your HTML `href` tags should look like (make sure to 
 
 ```html
 <a
-  href="[https://mohawk-college-webring.vercel.app/api/previous?from=https://aboudhasan.tech](https://mohawk-college-webring.vercel.app/api/previous?from=https://aboudhasan.tech)"
+  href="https://mohawk-college-webring.vercel.app/api/previous?from=https://aboudhasan.tech"
 >
   Previous
 </a>
 
 <a
-  href="[https://mohawk-college-webring.vercel.app/api/next?from=https://aboudhasan.tech](https://mohawk-college-webring.vercel.app/api/next?from=https://aboudhasan.tech)"
+  href="https://mohawk-college-webring.vercel.app"
+>
+  Mohawk Webring
+</a>
+
+<a
+  href="https://mohawk-college-webring.vercel.app/api/next?from=https://aboudhasan.tech"
 >
   Next
 </a>
