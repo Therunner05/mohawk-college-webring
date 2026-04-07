@@ -3,7 +3,15 @@
     "name": "Abdulrahman Hasan",
     "url": "https://aboudhasan.tech",
     "graduationYear": 2027,
-    "tags": ["TypeScript", "JavaScript", "Node.js", "React", "Vue", "Linux"],
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "React",
+      "Vue",
+      "Linux",
+      "Bash"
+    ],
     "jobStatus": "Employed",
     "email": "aboudhasan06@gmail.com"
   }

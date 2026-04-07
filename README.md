@@ -49,7 +49,9 @@ You may optionally add an `email` property to your member object.
 
 For the webring to function, you should provide the "Next" and "Previous" navigation links on your portfolio, and ideally a link to the webring landing page itself.
 
-Here is an example of what your HTML `href` tags should look like (make sure to replace the parameter in the `?from=` query with your actual website URL):
+Below is what you need to get started. Copy and paste both the HTML and CSS into your website. Make sure to replace the parameter in the "?from=" query with your actual website URL.
+
+#### HTML
 
 ```html
 <a
@@ -58,7 +60,7 @@ Here is an example of what your HTML `href` tags should look like (make sure to 
   Previous
 </a>
 
-<a href="https://mohawk-college-webring.vercel.app"> Mohawk Webring </a>
+<div class="webring-logo"></div>
 
 <a
   href="https://mohawk-college-webring.vercel.app/api/next?from=https://aboudhasan.tech"
@@ -67,7 +69,24 @@ Here is an example of what your HTML `href` tags should look like (make sure to 
 </a>
 ```
 
-**Future Plans:**
+#### CSS
 
-- Currently, the widget relies on simple text labels like 'Next', 'Previous', and 'Mohawk Webring'. In the future, we hope to have an official webring logo for the main link and have SVG arrows for the navigation links. This will allow you to embed a much more visually appealing widget on your portfolio.
-- We'd also like to have a prettier domain than what we currently have.
+```css
+.webring-logo {
+  width: 60px;
+  height: 60px;
+
+  /* You can do whatever color you like for the logo*/
+  background-color: #3b82f6;
+
+  -webkit-mask-image: url("https://mohawk-college-webring.vercel.app/logo.svg");
+  mask-image: url("https://mohawk-college-webring.vercel.app/logo.svg");
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+```
